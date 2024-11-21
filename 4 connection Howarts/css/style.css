@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'HarryPotter';
+    src: url('./../assets/fonts/HarryPotter.ttf') format('truetype');
+}
+:root {
+    --cell-size: 50px;
+    --cell-gap: 5px;
+    /* variables por si prefiero jugar con colores */
+    --player-color: red;
+    --machine-color: blue;
+    --empty-cell-color: #eee;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: HarryPotter;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    background-image: url(./../assets/images/fondo.jpeg);
+}
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #3a2508;
+}
+.user-info{
+    padding: 0px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-name{
+    color: goldenrod;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    text-shadow: 3px 3px 0 #000;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.school-image{
+    width: 75px;
+    border-radius: 50%;
+    border: 2px solid goldenrod;
+}
+.game-controls {
+    text-align: center;
+    margin: 20px;
+}
+.start-btn{
+    display: inline-block;
+    cursor: pointer;
+    padding: 3px 10px; 
+    text-align: center;
+    background-color: burlywood;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    font-family: HarryPotter;
+    color: #3a2508;
+}
+.start-btn:hover{
+    background-color: #3a2508;
+    color: burlywood; 
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(7, var(--cell-size));
+    grid-template-rows: repeat(6, var(--cell-size));
+    gap: var(--cell-gap);
+    margin: 20px 0px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border-radius: 50%;
+    background-color: var(--empty-cell-color);
+}
+
+.player {
+    background-color: var(--player-color);
+}
+
+.machine {
+    background-color: var(--machine-color);
+}
+
+/* Oculta el tablero y el mensaje al inicio */
+.hidden {
+    display: none;
+}
+
+.end-message {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(39, 92, 39, 0.511);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Modern Vision', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.end-message.visible {
+    opacity: 1;
+}
