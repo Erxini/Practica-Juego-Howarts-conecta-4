@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccion nombre</title>
+    <link rel="stylesheet" href="./css/acceso.css">
+    <link rel="shortcut icon" href="./assets/images/howarts.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>¿Cuál es tu nombre?</h1>
+
+        <!-- Select con nombres predefinidos -->
+        <select class="nameSelect" id="nameSelect">
+            <option value="">Selecciona un nombre</option>
+            <option value="Juan">Juan</option>
+            <option value="Ana">Ana</option>
+            <option value="Miguel">Miguel</option>
+            <option value="Sofía">Sofía</option>
+            <option value="Pablo">Pablo</option>
+            <option value="María">María</option>
+            <option value="Jorge">Jorge</option>
+            <option value="Laura">Laura</option>
+            <option value="Sergio">Sergio</option>
+            <option value="Elena">Elena</option>
+            <option value="José">José</option>
+            <option value="Lucía">Lucía</option>
+        </select>
+
+        <!-- Input para escribir nombre -->
+        <input class="customName" type="text" id="customName" placeholder="Escribe tu nombre aquí">
+        <!-- Elegir la escuela de Hogwarts -->
+        <select id="schoolSelect">
+          <option value="">Selecciona una escuela</option>
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+          <option value="Slytherin">Slytherin</option>
+      </select>
+        <!-- Mensaje de error -->
+        <div class="error" id="errorMessage">Debes decir nombre y escuela</div>
+        <!-- Jugar -->
+        <button class="submitBtn" id="submitBtn">Jugar</button>
+    </div>
+
+    <script src="./js/acceso.js"></script>
+</body>
+</html>
